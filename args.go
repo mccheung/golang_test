@@ -1,0 +1,20 @@
+package main
+
+import (
+	"flag"
+	"fmt"
+)
+
+
+var infile *string = flag.String("i","infile","File contains values for sorting")
+var outfile *string = flag.String("o","outfile", "File contains values for sorted values")
+var algorithm *string = flag.String("a", "algorithm", "Sort algorithm")
+
+
+func main(){
+	flag.Parse()
+
+	if infile != nil {
+		fmt.Println("infile = ", *infile, "outfile = ", *outfile, "algorithm", *algorithm )
+	}
+}
